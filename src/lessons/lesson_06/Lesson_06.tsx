@@ -11,6 +11,8 @@ function Lesson_06() {
 
   //   автоматическое определение типа
   let name = "Tom";
+  console.log(name);
+  
   //   name = 23; // будет ошибка!
   // //////////////////////////////////////////////
   // 2 тип. number - числовой
@@ -22,9 +24,11 @@ function Lesson_06() {
   result = Infinity;
   console.log(result);
   // /////////////////////////////////////////////////
+
   //  3 тип. boolean - логический
   let isAdmin: boolean = true;
   isAdmin = false;
+
   // //////////////////////////////////////////////////
   //   4. Массив
   const animals: string[] = ["Tiger", "Lion", "Dog"];
@@ -41,6 +45,8 @@ function Lesson_06() {
     "age",
     30,
   ];
+  console.log(userArray);
+  
 
   //   userArray[0] = true;  // будет ошибка!
   // ////////////////////////////////////////////////////
@@ -50,6 +56,8 @@ function Lesson_06() {
   const sayHi = (personalName: string): void => {
     console.log(`Hello, ${personalName}`);
   };
+  console.log(sayHi);
+  
 
   //   2 способ
   //   const sayHi: (personalName: string) => void = (personalName) => {
@@ -68,17 +76,25 @@ function Lesson_06() {
   let anyVariable: any = "hello";
   anyVariable = 3;
   anyVariable = [1, "a", true];
+  
+  
   //  ////////////////////////////////////////////////////
   //   8. null и undefined
   let count: null = null;
   //   count = 1; // будет ошибка!
+  console.log(count);
+  
 
   let year: undefined = undefined;
   //   year = 3; // будет ошибка!
+  console.log(year);
+  
+
   // //////////////////////////////////////////////////
   //   9. union
   let userAge: undefined | number | string = undefined;
   userAge = "40";
+
   //  ////////////////////////////////////////////////
   //   10. Object
   interface User {
@@ -91,6 +107,8 @@ function Lesson_06() {
     age: 30,
     lastName: "Smith",
   };
+  console.log(userData);
+  
 
   interface Admin extends User {
     isAdmin: boolean;
@@ -102,6 +120,8 @@ function Lesson_06() {
     lastName: "John Johnson",
     age: 34,
   };
+  console.log(adminData);
+  
 
   //   можно дописать свойства для интерфейса
   interface User {
@@ -120,11 +140,15 @@ function Lesson_06() {
   const animalData: Animal = {
     name: "Lion",
   };
+  console.log(animalData);
+  
 
   const animalZoo: Animal | GlobalAnimalProps = {
     name: "Hipo",
     isAnimal: true
   }
+  console.log(animalZoo);
+  
 
   type Color = string | number | null;
   let backColor: Color = "black";

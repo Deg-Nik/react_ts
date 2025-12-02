@@ -1,0 +1,35 @@
+.homework_06_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 80px;
+  flex: 1;
+  gap: 80px;
+  background-color: rgb(77, 56, 239);
+}
+
+.car_card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 250px;
+  height: fit-content;
+  border: 2px solid black;
+  padding: 40px;
+  margin: 30px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 4px 12px black;
+}
+
+.car_card:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.brand {
+  display: flex;
+  justify-content: center;
+}
