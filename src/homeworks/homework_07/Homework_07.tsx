@@ -8,16 +8,16 @@ function Homework_07() {
   const [dislike, setDislikes] = useState<number>(0);
 
   const onLike = () => {
-    setLikes((countPlus: number) => {
+    setLikes((countPlus: number): number => {
       return countPlus + 1;
     });
   };
   const onDislike = () => {
-    setDislikes((countMinus: number) => {
+    setDislikes((countMinus: number): number => {
       return countMinus + 1;
     });
   };
-  const resetResults = () => {
+  const resetResults = (): void => {
     setLikes(0);
     setDislikes(0);
   };
