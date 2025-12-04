@@ -4,16 +4,16 @@ import Feedback from 'components/Feedback/Feedback';
 
 function Homework_07() {
 
-  const [like, setLikes] = useState(0);
-  const [dislike, setDislikes] = useState(0);
+  const [like, setLikes] = useState<number>(0);
+  const [dislike, setDislikes] = useState<number>(0);
 
   const onLike = () => {
-    setLikes((countPlus) => {
+    setLikes((countPlus: number) => {
       return countPlus + 1;
     });
   };
   const onDislike = () => {
-    setDislikes((countMinus) => {
+    setDislikes((countMinus: number) => {
       return countMinus + 1;
     });
   };
