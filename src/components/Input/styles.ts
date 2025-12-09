@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 
 interface InputComponentProps {
-  error?: string;
+  $error?: string;
   disabled?: boolean;
 }
 
@@ -21,7 +21,7 @@ export const InputLabel = styled.label`
 export const InputComponent = styled.input<InputComponentProps>`
   width: 100%;
   height: 50px;
-  border: 1px solid ${({ error }) =>(error? "red" : "#3f3f3f")};
+  border: 1px solid ${({ $error }) =>($error? "red" : "#3f3f3f")};
   border-radius: 4px;
   padding: 12px;
   outline: none;

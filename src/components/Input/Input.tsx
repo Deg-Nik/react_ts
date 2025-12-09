@@ -13,7 +13,7 @@ function Input({ id, name, type, placeholder, label, error, disabled=false} : In
         name={name}
         type={type}
         placeholder={placeholder}
-        error={error}
+        $error={error}
         disabled={disabled}
       />
     </InputWrapper>
