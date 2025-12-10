@@ -25,6 +25,14 @@ export const Container = styled.div`
   color: red;
 `;
 
+export const H2 = styled.h2`
+padding-left: 100px;
+`; 
+
+export const Li = styled.li`
+padding-left: 20px;
+`;
+
 export const Recept = styled.div`
   display: flex;
   flex-direction: column;
