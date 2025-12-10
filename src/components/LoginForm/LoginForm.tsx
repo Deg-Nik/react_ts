@@ -24,7 +24,7 @@ function LoginForm() {
     setEmail(event.target.value)
   }
 
-  const onChangePssword = (event: ChangeEvent<HTMLInputElement>) => {
+  const onChangePassword = (event: ChangeEvent<HTMLInputElement>) => {
     setPassword(event.target.value)
   }
 
@@ -53,7 +53,7 @@ function LoginForm() {
           placeholder="Enter your password"
           label="Password"
           value={password}
-          onChange={onChangePssword}
+          onChange={onChangePassword}
         />
       </InputsContainer>
       <Button name="Login" type="submit" />
