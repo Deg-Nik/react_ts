@@ -8,6 +8,8 @@ import {
   Ingredient,
   BtnContainer,
   Btn,
+  H2,
+  Li
 } from "./styles";
 
 export default function Consultation_05(): JSX.Element {
@@ -58,17 +60,17 @@ export default function Consultation_05(): JSX.Element {
       <Container>
         <img src={image} alt="" /> <br />
         <Recept>
-          <h2>Recept:</h2>
+          <H2>Recept:</H2>
           {instruction}
           <Ingredient>
-            <h3>Ingredient:</h3>
-            <li>{ingredient1}</li>
-            <li>{ingredient2}</li>
-            <li>{ingredient3}</li>
-            <li>{ingredient4}</li>
-            <li>{ingredient5}</li>
-            <li>{ingredient6}</li>
-            <li>{ingredient7}</li>
+            <H2>Ingredient:</H2>
+            <Li>{ingredient1}</Li>
+            <Li>{ingredient2}</Li>
+            <Li>{ingredient3}</Li>
+            <Li>{ingredient4}</Li>
+            <Li>{ingredient5}</Li>
+            <Li>{ingredient6}</Li>
+            <Li>{ingredient7}</Li>
           </Ingredient>
         </Recept>
       </Container>
