@@ -1,4 +1,4 @@
-import "./styles.css";
+import { Lesson_07_page_wrapper } from "./styles";
 import { WEATHER_CODES } from "./types";
 import Button from "components/Button/Button";
 import Input from "components/Input/Input";
@@ -117,10 +117,10 @@ function Lesson_07() {
     
   }
 
-  return <div className="lesson_07_page_wrapper">
+  return <Lesson_07_page_wrapper>
     <Button name="Send request" onClick={sendRequest}/>
     <Input name="userName" label="User Name"/>
     <Counter count={count} onMinus={onMinus} onPlus={onPlus}/>
-  </div>;
+  </Lesson_07_page_wrapper>;
 }
 export default Lesson_07;

@@ -1,4 +1,6 @@
-.lesson_06_page_wrapper {
+import styled from "@emotion/styled";
+
+export const Lesson_06_page_wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,4 +9,4 @@
   flex: 1;
   gap: 80px;
   background-color: rgb(159, 236, 210);
-}
+`

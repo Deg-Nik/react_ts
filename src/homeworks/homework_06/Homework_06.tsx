@@ -1,4 +1,4 @@
-import "./styles.css";
+import { Brand, Car_card, H3, Homework_06_wrapper } from "./styles";
 
 function Homework_06() {
   // лучше использовать interface, type обычно оставляют для других целей
@@ -20,17 +20,17 @@ function Homework_06() {
   const orderCars = cars.map((car: Car) => {
     return (
       // Для key использовать index плохая практика
-      <div key={car.brand} className="car_card">
-        <h1 className="brand">{car.brand}</h1>
-        <h3>Price: {car.price}</h3>
-        <h3>Is Disel: {car.isDiesel ? "Yes" : "No"}</h3>
-      </div>
+      <Car_card key={car.brand} >
+        <Brand>{car.brand}</Brand>
+        <H3>Price: {car.price}</H3>
+        <H3>Is Disel: {car.isDiesel ? "Yes" : "No"}</H3>
+      </Car_card>
     );
   });
 
   console.log(cars);
 
-  return <div className="homework_06_wrapper">{orderCars}</div>;
+  return <Homework_06_wrapper>{orderCars}</Homework_06_wrapper>;
 }
 
 export default Homework_06;

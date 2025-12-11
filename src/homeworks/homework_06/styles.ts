@@ -1,4 +1,6 @@
-.homework_06_wrapper {
+import styled from "@emotion/styled";
+
+export const Homework_06_wrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -8,9 +10,9 @@
   flex: 1;
   gap: 80px;
   background-color: rgb(77, 56, 239);
-}
+`;
 
-.car_card {
+export const Car_card = styled.div`
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -22,14 +24,19 @@
   border-radius: 8px;
   background-color: white;
   box-shadow: 0 4px 12px black;
-}
 
-.car_card:hover {
+
+:hover {
   transform: scale(1.1);
   cursor: pointer;
 }
+`;
 
-.brand {
+export const Brand = styled.h1 `
   display: flex;
   justify-content: center;
-}
+`;
+
+export const H2 = styled.h2 ``;
+
+export const H3 = styled.h3 ``;

@@ -1,4 +1,4 @@
-import "./styles.css";
+import { Lesson_06_page_wrapper } from "./styles";
 
 function Lesson_06() {
   // 1 тип. string - строковый тип
@@ -158,9 +158,9 @@ function Lesson_06() {
   fontColor = null;
 
   return (
-    <div className="lesson_06_page_wrapper">
+    <Lesson_06_page_wrapper>
       Lesson 06
-    </div>
+    </Lesson_06_page_wrapper>
   );
 }
 

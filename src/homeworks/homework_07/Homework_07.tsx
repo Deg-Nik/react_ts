@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Feedback from 'components/Feedback/Feedback';
+import { Homework_07_wrapper } from "./styles"
  
 
 function Homework_07() {
@@ -23,9 +24,9 @@ function Homework_07() {
   };
 
   return (
-    <div className='homework_07_wrapper'>
+    <Homework_07_wrapper>
       <Feedback like={like} dislike={dislike} onLike={onLike} onDislike={onDislike} resetResults={resetResults}/>
-    </div>
+    </Homework_07_wrapper>
   )
 }
 
