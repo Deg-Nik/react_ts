@@ -1,5 +1,12 @@
-import { NoteFormContainer, Title, InputContainer, Ol, Li, OutputContainer } from "./styles";
-import { NOTE_FORM_VALUES } from "../../components/NoteFormHomework/types";
+import {
+  NoteFormContainer,
+  Title,
+  InputContainer,
+  Ol,
+  Li,
+  OutputContainer,
+} from "./styles";
+import { NOTE_FORM_VALUES } from "components/NoteFormHomework/types";
 import Button from "components/Button/Button";
 import Input from "components/Input/Input";
 import { useState, type ChangeEvent } from "react";
@@ -21,13 +28,7 @@ export default function NoteForm() {
   };
 
   const notesList = () => {
-    return (
-      <Ol>
-        {outputNote.map((output: string) => (
-          <Li key={v4()}>{output}</Li>
-        ))}
-      </Ol>
-    );
+    return outputNote.map((output: string) => <Li key={v4()}>{output}</Li>);
   };
 
   return (
@@ -44,7 +45,9 @@ export default function NoteForm() {
         />
         <Button name="Add note" type="submit" onClick={OutputNote} />
       </InputContainer>
-      <OutputContainer>{notesList()}</OutputContainer>
+      <OutputContainer>
+        <Ol>{notesList()}</Ol>
+      </OutputContainer>
     </NoteFormContainer>
   );
 }
