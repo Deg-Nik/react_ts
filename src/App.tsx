@@ -12,6 +12,7 @@ import Homework_09 from "homeworks/homework_09/Homework_09";
 import Lesson_10 from "lessons/lesson_10/Lesson_10";
 import Homework_10 from "homeworks/homework_10/Homework_10";
 import Playground from "consultations/consultation_06/Playground";
+import Lesson_11 from "lessons/lesson_11/Lesson_11";
 
 function App() {
   return (
@@ -29,7 +30,8 @@ function App() {
       {/* <Homework_09/> */}
       {/* <Lesson_10/> */}
       {/* <Homework_10/> */}
-      <Playground/>
+      {/* <Playground/> */}
+      <Lesson_11/>
     </>
   );
 }

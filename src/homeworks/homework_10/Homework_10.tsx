@@ -1,4 +1,4 @@
-import { useEffect, useState, type ChangeEvent } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import Button from "components/Button/Button";
 import { PageWrapper, Card, Title, ContainerJoke, Text, ErrorText } from "./styles";
