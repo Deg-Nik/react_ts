@@ -1,4 +1,4 @@
-import { useEffect, useState, type ChangeEvent } from "react";
+import { useState, type ChangeEvent } from "react";
 import axios from "axios";
 import Input from "components/Input/Input";
 import Button from "components/Button/Button";
@@ -69,6 +69,4 @@ export default function Lesson_11() {
   );
 }
 
-// slice()
-// filter()
-// array.slice(start, end)
+
