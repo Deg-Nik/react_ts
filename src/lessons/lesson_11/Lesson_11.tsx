@@ -1,8 +1,15 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState, type ChangeEvent } from "react";
+import "./styles";
+
+// Axios — это как шланг, через который я тяну данные из интернета
 import axios from "axios";
+
+// Готовые детали интерфейса: поле ввода и кнопка
 import Input from "components/Input/Input";
 import Button from "components/Button/Button";
+
+// Обёртки и стили, чтобы всё выглядело аккуратно
 import {
   PageWrapper,
   ContainerInputButton,
@@ -10,8 +17,11 @@ import {
   Text,
   ErrorText,
 } from "./styles";
+
+// Генератор уникальных номеров, чтобы React не путался в списке
 import { v4 } from "uuid";
 
+// Основная функция — это как весь узел в сборе
 export default function Lesson_11() {
   const [country, setCountry] = useState<string>("");
   const [output, setOutput] = useState<
