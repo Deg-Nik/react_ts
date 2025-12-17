@@ -14,7 +14,7 @@ import { v4 } from "uuid";
 export default function Lesson_11() {
   const [country, setCountry] = useState<string>("");
   const [output, setOutput] = useState<
-    { country: string; name: string; web_pages: string }[]
+    { country: string; name: string; web_pages: string[] }[]
   >([]);
   const [error, setError] = useState<string | undefined>(undefined);
   const [isDisabled, setIsDisabled] = useState<boolean>(false);
