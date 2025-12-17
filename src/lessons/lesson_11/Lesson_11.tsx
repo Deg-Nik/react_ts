@@ -70,8 +70,6 @@ export default function Lesson_11() {
       // То, что пришло с сервера, кладу в output
       setOutput(response.data);
 
-      // Ниже неправильный вариант, поэтому он закомментирован
-      // setOutput(`${data.country} ${data.name} ${data.web_pages}`);
     } catch (error: any) {
       // Если что-то сломалось — записываю сообщение об ошибке
       setError(error.message);
