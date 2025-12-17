@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState, type ChangeEvent } from "react";
 import axios from "axios";
 import Input from "components/Input/Input";
@@ -34,7 +35,6 @@ export default function Lesson_11() {
     try {
       const response = await axios.get(UrlUni);
       setOutput(response.data);
-      // setOutput(`${data.country} ${data.name} ${data.web_pages}`);
     } catch (error: any) {
       setError(error.message);
     } finally {
@@ -68,5 +68,8 @@ export default function Lesson_11() {
     </PageWrapper>
   );
 }
+
+
+
 
 
