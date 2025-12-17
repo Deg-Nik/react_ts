@@ -1,16 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState, type ChangeEvent } from "react";
-import axios from "axios";
-import Input from "components/Input/Input";
-import Button from "components/Button/Button";
-import {
-  PageWrapper,
-  ContainerInputButton,
-  Card,
-  Text,
-  ErrorText,
-} from "./styles";
-import { v4 } from "uuid";
+import "./styles";
 
 // Axios — это как шланг, через который я тяну данные из интернета
 import axios from "axios";
