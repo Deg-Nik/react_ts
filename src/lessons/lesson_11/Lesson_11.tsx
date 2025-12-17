@@ -34,7 +34,6 @@ export default function Lesson_11() {
     try {
       const response = await axios.get(UrlUni);
       setOutput(response.data);
-      // setOutput(`${data.country} ${data.name} ${data.web_pages}`);
     } catch (error: any) {
       setError(error.message);
     } finally {
