@@ -22,12 +22,14 @@ export const ContainerInputButton = styled.form`
 export const Card = styled.div`
   margin-top: 30px;
   width: 600px;
+  height: 600px;
   padding: 20px;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
   gap: 15px;
   border-radius: 12px;
+  overflow-y: auto;
 `;
 
 export const Text = styled.p`

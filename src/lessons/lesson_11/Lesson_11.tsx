@@ -1,4 +1,4 @@
-import { useState, type ChangeEvent } from "react";
+import { useState, type ChangeEvent, type FormEvent } from "react";
 import "./styles";
 
 // Axios — это как шланг, через который я тяну данные из интернета
@@ -20,22 +20,26 @@ import {
 // Генератор уникальных номеров, чтобы React не путался в списке
 import { v4 } from "uuid";
 
+interface Universitets {
+  country: string;
+  name: string;
+  web_pages: string[];
+}
+
 // Основная функция — это как весь узел в сборе
 export default function Lesson_11() {
   const [country, setCountry] = useState<string>("");
-  const [output, setOutput] = useState<
-    { country: string; name: string; web_pages: string[] }[]
-  >([]);
+  const [output, setOutput] = useState<Universitets[]>([]);
   const [error, setError] = useState<string | undefined>(undefined);
   const [isDisabled, setIsDisabled] = useState<boolean>(false);
 
-  const UrlUni = `http://universities.hipolabs.com/search?country=${country}`;
+  const UrlUni: string = `http://universities.hipolabs.com/search?country=${country}`;
 
-  const onSearchChange = (event: ChangeEvent<HTMLInputElement>) => {
+  const onSearchChange = (event: ChangeEvent<HTMLInputElement>): void => {
     setCountry(event.target.value);
   };
 
-  const getCountry = async (event: any) => {
+  const getCountry = async (event: FormEvent): Promise<void> => {
     event.preventDefault();
     setOutput([]);
     setError(undefined);
@@ -64,21 +68,17 @@ export default function Lesson_11() {
         />
         <Button isDisabled={isDisabled} name="Get Universities" type="submit" />
       </ContainerInputButton>
-      <Card>
-        {output.length > 0 &&
-          output.slice(0, 15).map((universities) => (
+      {output.length > 0 && (
+        <Card>
+          {output.slice(0, 15).map((universities: Universitets) => (
             <Text key={v4()}>
-              {universities.country} {universities.name}{" "}
+              {universities.country} {universities.name}
               {universities.web_pages}
             </Text>
           ))}
-        {!!error && <ErrorText>{error}</ErrorText>}
-      </Card>
+          {!!error && <ErrorText>{error}</ErrorText>}
+        </Card>
+      )}
     </PageWrapper>
   );
 }
-
-
-
-
-
