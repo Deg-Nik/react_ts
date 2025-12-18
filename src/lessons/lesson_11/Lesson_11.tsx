@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState, type ChangeEvent } from "react";
 import "./styles";
 
