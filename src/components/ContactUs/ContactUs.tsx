@@ -18,8 +18,7 @@ export default function ContactUs() {
     [CONTACT_US_VALUES.EMAIL]: Yup.string()
       .min(6, "minimum 6 simbol")
       .max(60, "maximum 60 simbol"),
-  });
-
+      .email("invalid email format"),
   const formik = useFormik({
     initialValues: {
       [CONTACT_US_VALUES.FULLNAME]: "",
