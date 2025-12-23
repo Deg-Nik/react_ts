@@ -11,5 +11,5 @@ export type InputProps = {
   error?: string | undefined;
   value?: string;
   onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
-
+  onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
 } 
