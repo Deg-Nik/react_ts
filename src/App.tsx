@@ -1,10 +1,14 @@
 import GlobalStyles from "styles/GlobalStyles";
-import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "components/Layout/Layout";
 import About from "pages/EmployeeApp/About/About";
 import Home from "pages/EmployeeApp/Home/Home";
 import ContactUs from "pages/EmployeeApp/ContactUs/ContactUs";
 import LogIn from "pages/EmployeeApp/LogIn/LogIn";
+import Clients from "pages/EmployeeApp/Clients/Clients";
+import Booking from "pages/EmployeeApp/Clients/Booking/Booking";
+import TUI from "pages/EmployeeApp/Clients/TUI/TUI";
+import Coral from "pages/EmployeeApp/Clients/Coral/Coral";
 
 
 import Lesson_06 from "lessons/lesson_06/Lesson_06";
@@ -26,17 +30,22 @@ import Homework_12 from "homeworks/homework_12/Homework_12";
 import Consultation_07 from "consultations/consultation_07/Consultation_07";
 import Lesson_13 from "lessons/lesson_13/Lesson_13";
 
+
 function App() {
   return (
     <BrowserRouter>
       <GlobalStyles />
       <Layout>
         <Routes>
-          <Route path="/" element={<Home />}/>
-          <Route path="/about" element={<About />}/>
-          <Route path="/login" element={<LogIn/>}/>
-          <Route path="/contactUs" element={<ContactUs/>}/>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/login" element={<LogIn />} />
+          <Route path="/contactUs" element={<ContactUs />} />
           <Route path="*" element="Page Not Found" />
+          <Route path="/clients" element={<Clients/>} />
+          <Route path="/clients/booking" element={<Booking />} />
+          <Route path="/clients/tui" element={<TUI />} />  
+          <Route path="/clients/coral" element={<Coral />} />
         </Routes>
       </Layout>
       {/* <Lesson_06/> */}
