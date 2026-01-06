@@ -1,21 +1,22 @@
 import { useNavigate } from "react-router-dom"; 
 import { ClientsContainer, ButtonControl, Title, ClientsLink } from "./styles";
 import Button from "components/Button/Button";
+import { ROUTES } from "constants/routes"
 
 function Clients() {
 
   const navigate = useNavigate();
   const goToHome = () => {
-    navigate("/")
+    navigate(ROUTES.HOME)
   };
   const goBooking = () => {
-    navigate("/clients/booking")
+    navigate(ROUTES.BOOKING)
   };
   const goTUI = () => {
-    navigate("/clients/tui")
+    navigate(ROUTES.TUI)
   };
   const goCoral = () => {
-    navigate("/clients/coral")
+    navigate(ROUTES.CORAL)
   }
   return (
     <ClientsContainer>
