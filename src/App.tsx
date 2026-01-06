@@ -29,25 +29,27 @@ import Lesson_12 from "lessons/lesson_12/Lesson_12";
 import Homework_12 from "homeworks/homework_12/Homework_12";
 import Consultation_07 from "consultations/consultation_07/Consultation_07";
 import Lesson_13 from "lessons/lesson_13/Lesson_13";
+import { ROUTES } from "constants/routes"
+import Lesson_14 from "lessons/lesson_14/Lesson_14";
 
 
 function App() {
   return (
     <BrowserRouter>
       <GlobalStyles />
-      <Layout>
+      {/* <Layout>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/login" element={<LogIn />} />
-          <Route path="/contactUs" element={<ContactUs />} />
-          <Route path="*" element="Page Not Found" />
-          <Route path="/clients" element={<Clients/>} />
+          <Route path={ROUTES.HOME} element={<Home />} />
+          <Route path={ROUTES.ABOUT} element={<About />} />
+          <Route path={ROUTES.LOGIN} element={<LogIn />} />
+          <Route path={ROUTES.CONTACT_US} element={<ContactUs />} />
+          <Route path={ROUTES.NOT_FOUND} element="Page Not Found" />
+          <Route path={ROUTES.CLIENT} element={<Clients/>} />
           <Route path="/clients/booking" element={<Booking />} />
           <Route path="/clients/tui" element={<TUI />} />  
           <Route path="/clients/coral" element={<Coral />} />
         </Routes>
-      </Layout>
+      </Layout> */}
       {/* <Lesson_06/> */}
       {/* <Homework_06/> */}
       {/* <Homework_06_lesson/> */}
@@ -66,6 +68,7 @@ function App() {
       {/* <Homework_12/> */}
       {/* <Consultation_07/> */}
       {/* <Lesson_13/> */}
+      <Lesson_14 />
     </BrowserRouter>
   );
 }

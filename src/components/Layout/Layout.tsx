@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom"; 
+import { ROUTES } from "constants/routes"
 
 import {
   LayoutWrapper,
@@ -39,20 +40,20 @@ function Layout({ children }: LayoutProps) {
               fontWidth: isActive ? "bold" : "normal",
               textDecoration: isActive ? "underline" : "none",
             })}
-            to="/"
+            to={ROUTES.HOME}
           >
             Home
           </HeaderLink>
-          <HeaderLink style={getActiveStyles} to="/clients">
+          <HeaderLink style={getActiveStyles} to={ROUTES.CLIENT}>
             Clients
           </HeaderLink>
-          <HeaderLink style={getActiveStyles} to="/contactUs">
+          <HeaderLink style={getActiveStyles} to={ROUTES.CONTACT_US}>
             Contact Us
           </HeaderLink>
-          <HeaderLink style={getActiveStyles} to="/about">
+          <HeaderLink style={getActiveStyles} to={ROUTES.ABOUT}>
             About
           </HeaderLink>
-          <HeaderLink style={getActiveStyles} to="/login">
+          <HeaderLink style={getActiveStyles} to={ROUTES.LOGIN}>
             Login
           </HeaderLink>
         </NavigationContainer>
@@ -66,11 +67,11 @@ function Layout({ children }: LayoutProps) {
           />
         </FooterLogo>
         <FooterNavigation>
-          <FooterLink to="/">Home</FooterLink>
-          <FooterLink to="/clients">Clients</FooterLink>
-          <FooterLink to="/contactUs">Contact Us</FooterLink>
-          <FooterLink to="/about">About</FooterLink>
-          <FooterLink to="/login">Login</FooterLink>
+          <FooterLink to={ROUTES.HOME}>Home</FooterLink>
+          <FooterLink to={ROUTES.CLIENT}>Clients</FooterLink>
+          <FooterLink to={ROUTES.CONTACT_US}>Contact Us</FooterLink>
+          <FooterLink to={ROUTES.ABOUT}>About</FooterLink>
+          <FooterLink to={ROUTES.LOGIN}>Login</FooterLink>
         </FooterNavigation>
       </Footer>
     </LayoutWrapper>
