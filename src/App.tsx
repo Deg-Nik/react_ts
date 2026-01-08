@@ -1,6 +1,6 @@
 import GlobalStyles from "styles/GlobalStyles";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Layout from "components/Layout/Layout";
+// import Layout from "components/Layout/Layout";
 import About from "pages/EmployeeApp/About/About";
 import Home from "pages/EmployeeApp/Home/Home";
 import ContactUs from "pages/EmployeeApp/ContactUs/ContactUs";
@@ -32,6 +32,9 @@ import Lesson_13 from "lessons/lesson_13/Lesson_13";
 import { ROUTES } from "constants/routes"
 import Lesson_14 from "lessons/lesson_14/Lesson_14";
 import Homework_14 from "homeworks/homework_14/Homework_14";
+
+import Layout from "pages/EmployeeProject/Layout";
+import CreateEmployee from "pages/EmployeeProject/CreateEmployee/CreateEmployee";
 
 
 function App() {
@@ -70,7 +73,12 @@ function App() {
       {/* <Consultation_07/> */}
       {/* <Lesson_13/> */}
       {/* <Lesson_14 /> */}
-      <Homework_14/>
+      {/* <Homework_14/> */}
+      <Layout>
+        <Routes>
+          <Route path={ROUTES.CREATE_EMPLOYEE} element={<CreateEmployee/>}/>
+        </Routes>
+      </Layout>
     </BrowserRouter>
   );
 }
