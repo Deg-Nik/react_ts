@@ -7,5 +7,6 @@ export enum ROUTES {
   BOOKING = "/client/booking",
   CORAL = "/client/coral",
   TUI = "/client/tui",
-  NOT_FOUND = "*"
+  NOT_FOUND = "*",
+  CREATE_EMPLOYEE = "/create_employee"
 }
