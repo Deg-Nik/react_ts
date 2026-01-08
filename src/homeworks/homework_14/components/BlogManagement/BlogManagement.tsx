@@ -17,7 +17,6 @@ function BlogManagement() {
     if (!userText.trim()) return;
 
     setUserPost({ value: userText });
-    setUserText("");
   };
 
   const onTextChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
@@ -26,7 +25,7 @@ function BlogManagement() {
 
   
   return (
-    <BlogContent
+    <BlogContent.Provider
       value={{
         userPost: userPost,
         setUserPost: setUserPost,
@@ -38,7 +37,7 @@ function BlogManagement() {
         <Button name="Post" onClick={getUserPost} />
         {userPost && <Card />}
       </BlogWrapper>
-    </BlogContent>
+    </BlogContent.Provider>
   );
 }
 
