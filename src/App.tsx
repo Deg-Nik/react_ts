@@ -31,6 +31,7 @@ import Consultation_07 from "consultations/consultation_07/Consultation_07";
 import Lesson_13 from "lessons/lesson_13/Lesson_13";
 import { ROUTES } from "constants/routes"
 import Lesson_14 from "lessons/lesson_14/Lesson_14";
+import Homework_14 from "homeworks/homework_14/Homework_14";
 
 
 function App() {
@@ -68,7 +69,8 @@ function App() {
       {/* <Homework_12/> */}
       {/* <Consultation_07/> */}
       {/* <Lesson_13/> */}
-      <Lesson_14 />
+      {/* <Lesson_14 /> */}
+      <Homework_14/>
     </BrowserRouter>
   );
 }
