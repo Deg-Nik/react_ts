@@ -9,20 +9,20 @@ import { LoginFormContainer, InputsContainer, Title } from "./styles";
 
 const validationShema = Yup.object().shape({
   [CREATE_FORM_VALUES.NAME]: Yup.string()
-    .required("Email field is required")
-    .email("fild email forme"),
+    .required("Name field is required")
+    .min(2, "minimum 2 simbols")
+    .max(50, "maximum 50 simbols"),
   [CREATE_FORM_VALUES.SURNAME]: Yup.string()
-    .required("Password field is required")
-    .min(5, "min 5 simbols")
-    .max(10, "max 10 simbols"),
-  [CREATE_FORM_VALUES.AGE]: Yup.number()
-    .required("Password field is required")
-    .min(5, "min 5 simbols")
-    .max(10, "max 10 simbols"),
+    .required("Surname field is required")
+    .min(2, "minimum 2 simbols")
+    .max(15, "maximum 15 simbols"),
+  [CREATE_FORM_VALUES.AGE]: Yup.string()
+    .required("Age field is required")
+    .min(1, "min 1 simbols")
+    .max(3, "max 3 simbols"),
   [CREATE_FORM_VALUES.JOB_POSITION]: Yup.string()
-    .required("Password field is required")
-    .min(5, "min 5 simbols")
-    .max(10, "max 10 simbols"),  
+    .min(1, "min 1 simbols")
+    .max(30, "max 30 simbols"),  
 });
 
 function CreateForm() {
@@ -87,7 +87,7 @@ function CreateForm() {
           error={formik.errors[CREATE_FORM_VALUES.JOB_POSITION]}
         />
       </InputsContainer>
-      <Button name="Login" type="submit" />
+      <Button name="Create" type="submit" />
     </LoginFormContainer>
   )
 }
