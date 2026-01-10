@@ -11,32 +11,32 @@ export const Header = styled.header`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  height: 100px;
-  border-bottom: 1px solid black;
-  padding: 20px 40px;
+  height: 120px;
+  border-bottom: 2px solid black;
+  padding: 42px 84px;
 `;
 
 export const Logo = styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
   height: 100%;
   width: 80px;
   cursor: pointer;
-`;
-
-export const LogoImg = styled.img`
-  width: 100%;
-  height: 100%;
+  font-weight: 700;
+  font-size: 16px;
 `;
 
 export const NavigationContainer = styled.nav`
   display: flex;
-  gap: 30px;
+  gap: 56px;
   height: 100%;
   align-items: center;
-`;
+ `;
 
 export const HeaderLink = styled(NavLink)`
-  font-size: 20px;
-  font-weight: normal;
+  font-size: 28px;
+  font-weight: 400;
   text-decoration: none;
   color: black;
 `;
@@ -46,38 +46,10 @@ export const Main = styled.main`
   justify-content: center;
   flex: 1;
   padding: 40px;
-  background-color: rgba(0, 10, 66, 0.9);
+  background-color: #112233;
 `;
 
-export const Footer = styled.footer`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  height: 150px;
-  border-top: 1px solid black;
-  background-color: rgba(0, 10, 66, 0.9);
-  padding: 20px 40px;
-  color: white;
-`;
 
-export const FooterLogo = styled.div`
-  height: 80px;
-  width: 80px;
-  cursor: pointer;
-`;
-
-export const FooterNavigation = styled.nav`
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-`;
-
-export const FooterLink = styled(Link)`
-  color: white;
-  font-size: 14px;
-  font-weight: bold;
-`;
 
 export const getActiveStyles = ({ isActive }: NavLinkRenderProps) => ({
   fontWeight: isActive ? "bold" : "normal",

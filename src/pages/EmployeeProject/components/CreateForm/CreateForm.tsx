@@ -51,7 +51,7 @@ function CreateForm() {
   return (
     <CreateFormContainer onSubmit={formik.handleSubmit}>
       <InputsContainer>
-        <Input
+          <Input
           id="name-id"
           name={CREATE_FORM_VALUES.NAME}
           placeholder="Enter your name"

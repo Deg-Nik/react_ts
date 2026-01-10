@@ -35,6 +35,8 @@ import Homework_14 from "homeworks/homework_14/Homework_14";
 
 import Layout from "pages/EmployeeProject/Layout";
 import CreateEmployee from "pages/EmployeeProject/CreateEmployee/CreateEmployee";
+import AutputForm from "pages/EmployeeProject/components/AutputForm/AutputForm";
+import Employees from "pages/EmployeeProject/Employees/Employees";
 
 
 function App() {
@@ -78,6 +80,9 @@ function App() {
         <Routes>
           <Route path={ROUTES.NOT_FOUND} element="Page Not Found" />
           <Route path={ROUTES.CREATE_EMPLOYEE} element={<CreateEmployee/>}/>
+        </Routes>
+        <Routes>
+          <Route path={ROUTES.EMPLOYEES} element={<Employees/>}/>
         </Routes>
       </Layout>
     </BrowserRouter>
