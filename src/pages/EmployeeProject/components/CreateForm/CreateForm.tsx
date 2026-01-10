@@ -3,9 +3,11 @@ import * as Yup from "yup";
 
 import Button from "components/Button/Button";
 import Input from "components/Input/Input";
+import { EmployeeContext } from "pages/EmployeeProject/Layout";
 
 import { CREATE_FORM_VALUES } from "./types";
-import { LoginFormContainer, InputsContainer, Title } from "./styles";
+import { CreateFormContainer, InputsContainer} from "./styles";
+import { useContext } from "react";
 
 const validationShema = Yup.object().shape({
   [CREATE_FORM_VALUES.NAME]: Yup.string()
@@ -25,7 +27,12 @@ const validationShema = Yup.object().shape({
     .max(30, "max 30 simbols"),  
 });
 
+
+
 function CreateForm() {
+
+  const {setEmployeeData} = useContext(EmployeeContext);
+
   const formik = useFormik({
       initialValues: {
         [CREATE_FORM_VALUES.NAME]: "",
@@ -36,12 +43,13 @@ function CreateForm() {
       validationSchema: validationShema,
       validateOnChange: false,
       onSubmit: (values, helpers) => {
+        setEmployeeData(values);      // передаем данные введенные пользователем с values в setEmployeeData
         console.log("formik");
         console.log(values, helpers);
       },
     });
   return (
-    <LoginFormContainer onSubmit={formik.handleSubmit}>
+    <CreateFormContainer onSubmit={formik.handleSubmit}>
       <InputsContainer>
         <Input
           id="name-id"
@@ -88,7 +96,7 @@ function CreateForm() {
         />
       </InputsContainer>
       <Button name="Create" type="submit" />
-    </LoginFormContainer>
+    </CreateFormContainer>
   )
 }
 export default CreateForm;
