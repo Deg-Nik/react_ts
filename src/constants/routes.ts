@@ -8,5 +8,7 @@ export enum ROUTES {
   CORAL = "/client/coral",
   TUI = "/client/tui",
   NOT_FOUND = "*",
-  CREATE_EMPLOYEE = "/create_employee"
+  CREATE_EMPLOYEE = "/create_employee",
+  EMPLOYEES = '/employees',
+  // AUTPUT_FORM = '/autput_form',
 }
