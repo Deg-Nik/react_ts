@@ -38,7 +38,7 @@ export const HeaderLink = styled(NavLink)`
   font-size: 28px;
   font-weight: 400;
   text-decoration: none;
-  color: #000;
+  color: black;
 `;
 
 export const Main = styled.main`

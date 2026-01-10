@@ -78,6 +78,7 @@ function App() {
       {/* <Homework_14/> */}
       <Layout>
         <Routes>
+          <Route path={ROUTES.NOT_FOUND} element="Page Not Found" />
           <Route path={ROUTES.CREATE_EMPLOYEE} element={<CreateEmployee/>}/>
         </Routes>
         <Routes>
