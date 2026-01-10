@@ -5,7 +5,7 @@ import Button from "components/Button/Button";
 import Input from "components/Input/Input";
 
 import { CREATE_FORM_VALUES } from "./types";
-import { LoginFormContainer, InputsContainer, Title } from "./styles";
+import { LoginFormContainer, InputsContainer, } from "./styles";
 
 const validationShema = Yup.object().shape({
   [CREATE_FORM_VALUES.NAME]: Yup.string()
@@ -43,7 +43,7 @@ function CreateForm() {
   return (
     <LoginFormContainer onSubmit={formik.handleSubmit}>
       <InputsContainer>
-        <Input
+          <Input
           id="name-id"
           name={CREATE_FORM_VALUES.NAME}
           placeholder="Enter your name"
