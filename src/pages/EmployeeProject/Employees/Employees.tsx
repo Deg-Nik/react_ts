@@ -1,4 +1,4 @@
-import AutputForm from "../components/AutputForm/AutputForm";
+import OutputForm from "../components/OutputForm/OutputForm";
 import { PageWrapper } from "../CreateEmployee/styles";
 
 
@@ -6,7 +6,7 @@ import { PageWrapper } from "../CreateEmployee/styles";
 export default function Employees() {
   return (
     <PageWrapper>
-      <AutputForm/>
+       <OutputForm/>
     </PageWrapper>
   )
 }
