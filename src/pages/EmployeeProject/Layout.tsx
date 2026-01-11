@@ -8,19 +8,28 @@ import {
   Main,
   NavigationContainer,
 } from "./styles";
-import type { LayoutProps } from "./types";
+import type { EmployeeContextType, EmployeeData, LayoutProps } from "./types";
 import { createContext, useState } from "react";
 
 // функция где хранятся данные введенные пользователем
-export const EmployeeContext = createContext({
-  employeeData: {},
-  setEmployeeData: (EmployeeData: any) => {},
+export const EmployeeContext = createContext<EmployeeContextType>({
+  employeeData: {
+    name: "",
+    surname: "",
+    age:"", 
+    job_position:""},
+  setEmployeeData: () => {},
 });
 
 
 function Layout({ children }: LayoutProps) {
 
-  const [employeeData, setEmployeeData] = useState({});
+  const [employeeData, setEmployeeData] = useState<EmployeeData>({
+    name: "",
+    surname: "",
+    age:"", 
+    job_position:""
+  });
   console.log("layout", { employeeData });
 
   return (
@@ -33,7 +42,7 @@ function Layout({ children }: LayoutProps) {
             <HeaderLink style={getActiveStyles} to={ROUTES.CREATE_EMPLOYEE}>
               Create Employee
             </HeaderLink>
-            <HeaderLink style={getActiveStyles} to={""}>
+            <HeaderLink style={getActiveStyles} to={ROUTES.EMPLOYEES}>
               Employees
             </HeaderLink>
           </NavigationContainer>
