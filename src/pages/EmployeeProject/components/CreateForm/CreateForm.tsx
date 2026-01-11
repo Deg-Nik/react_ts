@@ -56,11 +56,7 @@ function CreateForm() {
           name={CREATE_FORM_VALUES.NAME}
           placeholder="Enter your name"
           label="Name*"
-          // formik.values.email - мы прописываем, чтобы элемент формы получил значение
-          // которое пользователь вводит с клавиатуры
           value={formik.values[CREATE_FORM_VALUES.NAME]}
-          // formik.handleChange - помогает контрлировать ввод пользователя данных с клавиатуры
-          // и когда пользователь что-то вводит, то formik.handleChange записывает данные в formik.values.email
           onChange={formik.handleChange}
           error={formik.errors[CREATE_FORM_VALUES.NAME]}
         />
