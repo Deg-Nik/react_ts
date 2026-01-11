@@ -19,6 +19,7 @@ export const OutputWrapper = styled.div`
 export const LabelWrapper = styled.p`
     font-weight: 400;
     font-size: 16px;
+    color: #6F6F6F;
 `;
 
 export const UserText = styled.p`
