@@ -8,7 +8,7 @@ import {
 } from "./styles";
 import { EmployeeContext } from "pages/EmployeeProject/Layout";
 
-function AutputForm() {
+function OutputForm() {
     const {employeeData} = useContext(EmployeeContext)
   return (
     <EmployeesWrapper>
@@ -32,4 +32,4 @@ function AutputForm() {
   );
 }
 
-export default AutputForm;
+export default OutputForm;

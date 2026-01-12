@@ -11,7 +11,7 @@ import {
 import type { EmployeeContextType, EmployeeData, LayoutProps } from "./types";
 import { createContext, useState } from "react";
 
-// функция где хранятся данные введенные пользователем
+// контекст где хранятся данные введенные пользователем
 export const EmployeeContext = createContext<EmployeeContextType>({
   employeeData: {
     name: "",
