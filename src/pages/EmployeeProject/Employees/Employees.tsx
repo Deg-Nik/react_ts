@@ -2,18 +2,19 @@ import { useContext } from "react";
 import OutputForm from "../components/OutputForm/OutputForm";
 import { PageWrapper } from "../CreateEmployee/styles";
 import { EmployeeContext } from "../Layout";
+import { v4 } from "uuid";
 
 
 
 export default function Employees() {
-
-  // карточка показывается только если все поля заполнены
-  const {employeeData} = useContext(EmployeeContext)
-  const isFilled = employeeData.name && employeeData.surname && employeeData.age && employeeData.job_position;
+  const { employeeData } = useContext(EmployeeContext);
 
   return (
     <PageWrapper>
-       {isFilled && <OutputForm/>}
+      {employeeData.map((person) => (
+        <OutputForm key={v4()} person={person} />
+      ))}
     </PageWrapper>
-  )
+  );
 }
+

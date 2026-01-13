@@ -42,10 +42,10 @@ function CreateForm() {
       },
       validationSchema: validationShema,
       validateOnChange: false,
-      onSubmit: (values, helpers) => {
-        setEmployeeData(values);      // передаем данные введенные пользователем с values в setEmployeeData
+      onSubmit: (values) => {
+        setEmployeeData(prev => [...prev, values]);      // передаем данные введенные пользователем с values в setEmployeeData
         console.log("formik");
-        console.log(values, helpers);
+        console.log(values);
       },
     });
   return (

@@ -1,4 +1,3 @@
-import { useContext } from "react";
 
 import {
   EmployeesWrapper,
@@ -6,27 +5,28 @@ import {
   LabelWrapper,
   UserText,
 } from "./styles";
-import { EmployeeContext } from "pages/EmployeeProject/Layout";
+import type { OutputProps } from "./types";
 
-function OutputForm() {
-    const {employeeData} = useContext(EmployeeContext)
+
+function OutputForm({person}: OutputProps) {
+    
   return (
     <EmployeesWrapper>
       <OutputWrapper>
         <LabelWrapper>Name</LabelWrapper>
-        <UserText>{employeeData.name}</UserText>
+        <UserText>{person.name}</UserText>
       </OutputWrapper>
       <OutputWrapper>
         <LabelWrapper>Surname</LabelWrapper>
-        <UserText>{employeeData.surname}</UserText>
+        <UserText>{person.surname}</UserText>
       </OutputWrapper>
       <OutputWrapper>
         <LabelWrapper>Age</LabelWrapper>
-        <UserText>{employeeData.age}</UserText>
+        <UserText>{person.age}</UserText>
       </OutputWrapper>
       <OutputWrapper>
         <LabelWrapper>Job Position</LabelWrapper>
-        <UserText>{employeeData.job_position}</UserText>
+        <UserText>{person.job_position}</UserText>
       </OutputWrapper>
     </EmployeesWrapper>
   );

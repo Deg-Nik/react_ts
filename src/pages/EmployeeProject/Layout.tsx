@@ -12,26 +12,17 @@ import type { EmployeeContextType, EmployeeData, LayoutProps } from "./types";
 import { createContext, useState } from "react";
 
 // контекст где хранятся данные введенные пользователем
-// export const EmployeeContext = createContext<EmployeeContextType>({
-//   employeeData: {
-//     name: "",
-//     surname: "",
-//     age:"", 
-//     job_position:""},
-//   setEmployeeData: () => {},
-// });
+export const EmployeeContext = createContext<EmployeeContextType>({
+  employeeData: [],
+  setEmployeeData: () => {},
+});
 
-export const EmployeeContext = createContext<EmployeeContextType | undefined>(undefined);
+// export const EmployeeContext = createContext<EmployeeContextType | undefined>(undefined);
 
 
 function Layout({ children }: LayoutProps) {
 
-  const [employeeData, setEmployeeData] = useState<EmployeeData>({
-    name: "",
-    surname: "",
-    age:"", 
-    job_position:""
-  });
+  const [employeeData, setEmployeeData] = useState<EmployeeData[]>([]);
   console.log("layout", { employeeData });
 
   return (

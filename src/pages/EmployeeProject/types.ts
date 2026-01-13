@@ -1,4 +1,4 @@
-import { type ReactNode } from "react";
+import { type ReactNode, type Dispatch, type SetStateAction } from "react";
 
 export interface LayoutProps {
   children: ReactNode;
@@ -17,7 +17,7 @@ export interface EmployeeData {
 // }
 
 export interface EmployeeContextType {
-  employeeData: EmployeeData;
-  setEmployeeData: React.Dispatch<React.SetStateAction<EmployeeData>>;
+  employeeData: EmployeeData[];
+  setEmployeeData: Dispatch<SetStateAction<EmployeeData[]>>;
 }
 
