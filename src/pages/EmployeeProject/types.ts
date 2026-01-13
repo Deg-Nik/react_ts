@@ -11,9 +11,13 @@ export interface EmployeeData {
   job_position: string;
 }
 
+// export interface EmployeeContextType {
+//   employeeData: EmployeeData;
+//   setEmployeeData: (data: EmployeeData) => void;
+// }
+
 export interface EmployeeContextType {
   employeeData: EmployeeData;
-  setEmployeeData: (data: EmployeeData) => void;
+  setEmployeeData: React.Dispatch<React.SetStateAction<EmployeeData>>;
 }
-
 
